@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CS480 Project Team 3</string>
+    <string name="title">Schedule Manager</string>
+    <string name="description">Enter course information below, then click Add in the options bar
+        to add the course to your schedule.</string>
+    <string name="course">Course:</string>
+    <string name="course_hint">e.g. CS480</string>
+    <string name="day_time">Day/Time:</string>
+    <string name="day_time_hint">e.g. Monday/Wednesday at 11:00am</string>
+    <string name="classroom">Classroom:</string>
+    <string name="classroom_hint">e.g. Smith 112</string>
+    <string name="class_title">Class List</string>
+    <string name="column_heading_1"><u>Course</u></string>
+    <string name="column_heading_2"><u>Day/Time</u></string>
+    <string name="column_heading_3"><u>Classroom</u></string>
+    <string name="button_1">WEB</string>
+    <string name="button_2">MAPS</string>
+    <string name="button_3">CONTACTS</string>
+    <string name="add">ADD</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="close">CLOSE</string>
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textColor="@color/bentley_dark_blue"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="@color/bentley_light_blue"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@id/title" />
+
+    <TextView
+        android:id="@+id/course_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/course"
+        style="@style/DefaultStyle"
+        android:layout_below="@id/description" />
+
+    <EditText
+        android:id="@+id/course_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DefaultStyle"
+        android:hint="@string/course_hint"
+        android:layout_below="@id/description"
+        android:layout_toRightOf="@id/course_label"/>
+
+    <TextView
+        android:id="@+id/day_time_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/day_time"
+        style="@style/DefaultStyle"
+        android:layout_below="@id/course_label" />
+
+    <EditText
+        android:id="@+id/day_time_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DefaultStyle"
+        android:hint="@string/day_time_hint"
+        android:layout_below="@id/course_input"
+        android:layout_toRightOf="@id/day_time_label"/>
+
+    <TextView
+        android:id="@+id/classroom_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        style="@style/DefaultStyle"
+        android:text="@string/classroom"
+        android:layout_below="@id/day_time_label"/>
+
+    <EditText
+        android:id="@+id/classroom_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DefaultStyle"
+        android:hint="@string/classroom_hint"
+        android:layout_below="@id/day_time_input"
+        android:layout_toRightOf="@id/classroom_label" />
+
+    <TextView
+        android:id="@+id/class_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/class_title"
+        android:textColor="@color/bentley_dark_blue"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_below="@id/classroom_label"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/list_headings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/class_title">
+
+        <TextView
+            android:id="@+id/column_heading_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/column_heading_1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/column_heading_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/column_heading_2"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/column_heading_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/column_heading_3"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_headings"
+        android:layout_above="@id/buttons">
+
+        <ListView
+            android:id="@+id/course_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="true" />
+
+        <ListView
+            android:id="@+id/day_time_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="true" />
+
+        <ListView
+            android:id="@+id/classroom_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/web_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/ButtonStyle"
+            android:text="@string/button_1" />
+
+        <Button
+            android:id="@+id/maps_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/ButtonStyle"
+            android:text="@string/button_2" />
+
+        <Button
+            android:id="@+id/contacts_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/ButtonStyle"
+            android:text="@string/button_3" />
+
+    </LinearLayout>
+
+</RelativeLayout>
