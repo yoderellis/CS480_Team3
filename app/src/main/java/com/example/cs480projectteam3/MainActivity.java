@@ -2,6 +2,7 @@ package com.example.cs480projectteam3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.Menu;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
-    implements AdapterView.OnItemClickListener, TextToSpeech.OnInitListener {
+    implements AdapterView.OnItemClickListener, TextToSpeech.OnInitListener{
 
     private EditText courseEntry;
     private EditText dayTimeEntry;
@@ -80,12 +81,14 @@ public class MainActivity extends AppCompatActivity
         });
         mapsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // HERE IS WHERE INTENTS FOR OTHER CLASSES GO
+                Intent map = new Intent(getApplicationContext(), CampusMap.class);
+                startActivity(map);
             }
         });
         contactsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // HERE IS WHERE INTENTS FOR OTHER CLASSES GO
+                Intent contacts = new Intent(getApplicationContext(), Contacts.class);
+                startActivity(contacts);
             }
         });
     }

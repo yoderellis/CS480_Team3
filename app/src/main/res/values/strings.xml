@@ -20,4 +20,11 @@
     <string name="update">UPDATE</string>
     <string name="delete">DELETE</string>
     <string name="close">CLOSE</string>
+    <string name="contacts">Contacts</string>
+    <string name="dept_heading">Department</string>
+    <string name="phone_heading">Phone</string>
+    <string name="email_heading">Email</string>
+    <string name="title_activity_campus_map">Map</string>
+    <string name="map">Campus Map</string>
+    <string name="building_label">Building</string>
 </resources>
