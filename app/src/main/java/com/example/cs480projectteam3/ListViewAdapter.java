@@ -3,7 +3,6 @@ package com.example.cs480projectteam3;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;

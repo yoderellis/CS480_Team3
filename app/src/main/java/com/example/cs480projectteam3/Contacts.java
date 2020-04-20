@@ -82,5 +82,4 @@ public class Contacts extends AppCompatActivity {
         contactList.setAdapter(contAdapter);
 
     }
-
 }
