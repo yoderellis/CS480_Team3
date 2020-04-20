@@ -1,3 +1,8 @@
+/*
+Custom Adapter for Multi-column ListView
+cite: http://www.exceptionbound.com/programming-tut/android-tutorial/add-android-multicolumn-listview-android
+ */
+
 package com.example.cs480projectteam3;
 
 import java.util.ArrayList;
@@ -78,27 +83,32 @@ public class ListViewAdapter extends BaseAdapter{
         holder.phoneTxt.setText(map.get(SECOND_COLUMN));
         holder.emailTxt.setText(map.get(THIRD_COLUMN));
 
-        // Dial phone number if phone number is clicked
+        // Implicit intent to dial or text when phone number is clicked
         holder.phoneTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String selection = holder.phoneTxt.getText().toString();
                 if (! selection.equals("")) {
                     Uri tel = Uri.parse("tel:" + selection);
-                    Intent dial = new Intent(Intent.ACTION_DIAL, tel);
-                    v.getContext().startActivity(dial);
+                    Uri smsTel = Uri.parse("smsto:" + selection);
+                    Intent dial = new Intent(Intent.ACTION_VIEW, tel);
+                    Intent sms = new Intent(Intent.ACTION_VIEW, smsTel);
+                    // Create chooser intent to allow user to choose to dial or send sms
+                    Intent chooser = Intent.createChooser(dial, "Select app");
+                    chooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[] {sms});
+                    v.getContext().startActivity(chooser);
                 }
             }
         });
-        // New email message if email is clicked
+        // Implicit intent to open email app when email is clicked
         holder.emailTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String selection = holder.emailTxt.getText().toString();
                 if (! selection.equals("")) {
                     Uri email = Uri.parse("mailto:" + selection);
-                    Intent send = new Intent(Intent.ACTION_SENDTO, email);
-                    v.getContext().startActivity(send);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, email);
+                    v.getContext().startActivity(intent);
                 }
             }
         });
