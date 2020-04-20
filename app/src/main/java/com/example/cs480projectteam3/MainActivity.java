@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
-    implements AdapterView.OnItemClickListener, TextToSpeech.OnInitListener{
+    implements AdapterView.OnItemClickListener, TextToSpeech.OnInitListener {
 
     private EditText courseEntry;
     private EditText dayTimeEntry;
