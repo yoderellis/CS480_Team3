@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity
         // assign listeners to Buttons
         webButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // HERE IS WHERE INTENTS FOR OTHER CLASSES GO
+                Intent web = new Intent(getApplicationContext(), web.class);
+                startActivity(web);
             }
         });
         mapsButton.setOnClickListener(new View.OnClickListener() {

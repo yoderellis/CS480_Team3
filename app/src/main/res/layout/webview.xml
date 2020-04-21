@@ -19,11 +19,12 @@
             android:text="Webview Info"
             android:textColor="#ffffff"
             android:textSize="25dp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/Course_discrip"
             android:background="#ffff00"
@@ -32,20 +33,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text=" Go to Course Description"
-            android:layout_weight="1">
-
-        </Button>
+            android:layout_weight="1" />
 
         <Button
-            android:id="@+id/calender"
+            android:id="@+id/calendar"
             android:layout_width="223dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="#ffff00"
             android:text="Go to Student Involvement"
-            android:textStyle="bold">
-        </Button>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/Back"
@@ -55,21 +53,17 @@
             android:layout_weight="1"
             android:background="#ffff00"
             android:text="Back to Main"
-            android:textStyle="bold">
-
-        </Button>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
 
 
-
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" />
 
-    </WebView>
 </LinearLayout>
 
 
