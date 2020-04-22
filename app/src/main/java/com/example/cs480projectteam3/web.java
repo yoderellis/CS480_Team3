@@ -34,7 +34,7 @@ public class web extends Activity  {
          Course_Dscrip.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 String urlText = "https://bentleyapps.azurewebsites.net/course-listing/index.php";
+                 String urlText = "https://www.bentley.edu/offices/registrar/course-descriptions";
                  webView.loadUrl(urlText);
              }
          });
@@ -52,9 +52,6 @@ public class web extends Activity  {
                  finish();
              }
          });
-
-
-
 
     }
 }
