@@ -55,7 +55,7 @@ public class CampusMap extends FragmentActivity implements AdapterView.OnItemSel
         setContentView(R.layout.activity_campus_map);
 
         // Assign spinner widget and set onclicklistener
-        spin = (Spinner) findViewById(R.id.spinner);
+        spin = findViewById(R.id.spinner);
         spin.setOnItemSelectedListener(this);
 
         //Create an ArrayAdapter and a default spinner layout

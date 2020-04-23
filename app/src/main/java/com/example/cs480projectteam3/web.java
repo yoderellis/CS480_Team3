@@ -31,14 +31,17 @@ public class web extends Activity  {
             }
         });
 
-         Course_Dscrip.setOnClickListener(new View.OnClickListener() {
+        // what happens when the course descriptions button is clicked
+        Course_Dscrip.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  String urlText = "https://www.bentley.edu/offices/registrar/course-descriptions";
                  webView.loadUrl(urlText);
-             }
+            }
          });
-         Calendar.setOnClickListener(new View.OnClickListener() {
+
+        // what happens when the calendar button is clicked
+        Calendar.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  String UrlText = "https://www.bentleyspeak.com/student-orgs-2";
@@ -46,7 +49,8 @@ public class web extends Activity  {
              }
          });
 
-         Back.setOnClickListener(new View.OnClickListener() {
+        // what happens when the back button is clicked
+        Back.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  finish();

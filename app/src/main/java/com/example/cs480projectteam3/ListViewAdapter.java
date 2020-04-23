@@ -68,9 +68,9 @@ public class ListViewAdapter extends BaseAdapter{
             convertView=inflater.inflate(R.layout.contact_list_row, null);
             holder=new ViewHolder();
 
-            holder.deptTxt=(TextView) convertView.findViewById(R.id.dept_item);
-            holder.phoneTxt=(TextView) convertView.findViewById(R.id.phone_item);
-            holder.emailTxt=(TextView) convertView.findViewById(R.id.email_item);
+            holder.deptTxt= convertView.findViewById(R.id.dept_item);
+            holder.phoneTxt= convertView.findViewById(R.id.phone_item);
+            holder.emailTxt= convertView.findViewById(R.id.email_item);
 
             convertView.setTag(holder);
         }else{

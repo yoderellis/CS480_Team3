@@ -13,6 +13,7 @@ public class Contacts extends AppCompatActivity {
     private ListView contactList;
     private ArrayList<HashMap<String, String>> contacts = new ArrayList<>();
 
+    // initialize contact lists
     private final String[] departments = {"Academic Services (Undergrad)", "Academic Services (Grad)",
             "Accountancy", "Career Services (Undergrad)", "Career Services (Grad)",
             "Center for International Students and Scholars", "Center for Languages and International Collaboration",
@@ -66,7 +67,7 @@ public class Contacts extends AppCompatActivity {
         setContentView(R.layout.activity_contacts);
 
         // Assign widgets
-        contactList = (ListView) findViewById(R.id.contact_list);
+        contactList = findViewById(R.id.contact_list);
 
         // Populate contactList
         for (int i=0; i<departments.length; i++) {
