@@ -22,6 +22,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class CampusMap extends AppCompatActivity implements AdapterView.OnItemSelectedListener, OnMapReadyCallback {
 
+    // navigation widgets
     private Button backButton;
     private Spinner spin;
 

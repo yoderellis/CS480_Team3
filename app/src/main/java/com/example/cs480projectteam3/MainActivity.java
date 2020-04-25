@@ -29,31 +29,42 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity
         implements AdapterView.OnItemClickListener, TextToSpeech.OnInitListener {
 
+    // entry fields
     private EditText courseEntry;
     private EditText dayTimeEntry;
     private EditText classroomEntry;
 
+    // animated logos
     private ImageView logo1;
     private ImageView logo2;
 
+    // course ListView
     private ListView courseList;
     private ArrayList<String> courses = new ArrayList<>();
     private ArrayAdapter<String> courseAdapter = null;
 
+    // day/time ListView
     private ListView dayTimeList;
     private ArrayList<String> dayTimes = new ArrayList<>();
     private ArrayAdapter<String> dayTimeAdapter = null;
 
+    // classroom ListView
     private ListView classroomList;
     private ArrayList<String> classrooms = new ArrayList<>();
     private ArrayAdapter<String> classroomAdapter = null;
 
+    // position of clicked item
     private int position;
+
+    // text-to-speech object
     private TextToSpeech speaker;
+
+    // navigation buttons
     private Button webButton;
     private Button mapsButton;
     private Button contactsButton;
 
+    // notification variables
     private NotificationManager NotificationManager;
     private NotificationCompat.Builder builder = null;
     private int SIMPLE_NOTIFICATION_ID = 25;

@@ -11,9 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class web extends AppCompatActivity  {
 
+    // navigation buttons
     private Button Course_Dscrip;
     private Button Calendar;
     private Button Back;
+
     private WebView webView;
 
     public void onCreate(Bundle saveInstanceState) {

@@ -64,7 +64,6 @@ public class Contacts extends AppCompatActivity {
             "GA_Bentley_Sustainability@bentley.edu", "ga_universitypolice@bentley.edu", "",
             "cbeinfo@bentley.edu", "gfarber@bentley.edu"};
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
