@@ -1,6 +1,6 @@
 package com.example.cs480projectteam3;
 
-import androidx.fragment.app.FragmentActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -19,9 +20,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class CampusMap extends FragmentActivity implements AdapterView.OnItemSelectedListener, OnMapReadyCallback {
+public class CampusMap extends AppCompatActivity implements AdapterView.OnItemSelectedListener, OnMapReadyCallback {
 
+    private Button backButton;
     private Spinner spin;
+
+    // Initialize building names, latitudes, and longitudes
     private final String[] buildings = {"", "LaCava Center", "Bentley Library", "Morison Hall",
             "Adamian Academic Center", "Smith Academic Technology Center", "Lindsay Hall",
             "Jennison Hall", "Stratton House", "Boylston A", "Boylston B", "Rhodes Hall",
@@ -54,21 +58,31 @@ public class CampusMap extends FragmentActivity implements AdapterView.OnItemSel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus_map);
 
+        // Assign button and set listener so that app goes back to main activity when clicked
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         // Assign spinner widget and set onclicklistener
         spin = findViewById(R.id.spinner);
         spin.setOnItemSelectedListener(this);
 
-        //Create an ArrayAdapter and a default spinner layout
+        // Create an ArrayAdapter and a default spinner layout
         ArrayAdapter<String> buildAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, buildings);
 
-        //Specify the layout to use when the list of choices appears
+        // Specify the layout to use when the list of choices appears
         buildAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(buildAdapter);  //connect ArrayAdapter to <Spinner>
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
@@ -93,7 +107,7 @@ public class CampusMap extends FragmentActivity implements AdapterView.OnItemSel
             Log.e(TAG, "Can't find style. Error: ", e);
         }
 
-        // Arrays for marker info
+        // Arrays for marker info separated according to academic / residential / other
         double[] acadLats = {42.388884, 42.387965, 42.387902, 42.387154, 42.387232, 42.387276,
                 42.388070};
         double[] acadLongs = {-71.220267, -71.219907, -71.218929, -71.218706, -71.220437,

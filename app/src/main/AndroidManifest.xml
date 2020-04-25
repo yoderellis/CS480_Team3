@@ -33,9 +33,7 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".web" />
-        <activity
-            android:name=".CampusMap"
-            android:label="@string/title_activity_campus_map" />
+        <activity android:name=".CampusMap" />
         <activity android:name=".Contacts" />
         <activity android:name=".MainActivity">
             <intent-filter>

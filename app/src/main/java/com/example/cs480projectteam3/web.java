@@ -1,6 +1,5 @@
 package com.example.cs480projectteam3;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebResourceRequest;
@@ -8,7 +7,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-public class web extends Activity  {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class web extends AppCompatActivity  {
 
     private Button Course_Dscrip;
     private Button Calendar;

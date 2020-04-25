@@ -3,6 +3,8 @@ package com.example.cs480projectteam3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -10,10 +12,11 @@ import java.util.HashMap;
 
 public class Contacts extends AppCompatActivity {
 
+    private Button backButton;
     private ListView contactList;
     private ArrayList<HashMap<String, String>> contacts = new ArrayList<>();
 
-    // initialize contact lists
+    // Initialize contact lists
     private final String[] departments = {"Academic Services (Undergrad)", "Academic Services (Grad)",
             "Accountancy", "Career Services (Undergrad)", "Career Services (Grad)",
             "Center for International Students and Scholars", "Center for Languages and International Collaboration",
@@ -66,10 +69,18 @@ public class Contacts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+        // Assign button and set listener so that app goes back to main activity when clicked
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         // Assign widgets
         contactList = findViewById(R.id.contact_list);
 
-        // Populate contactList
+        // Populate contactList with HashMaps
         for (int i=0; i<departments.length; i++) {
             HashMap<String, String> hash = new HashMap<>();
             hash.put("dept", departments[i]);

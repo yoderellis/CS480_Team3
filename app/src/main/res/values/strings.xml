@@ -27,4 +27,8 @@
     <string name="title_activity_campus_map">Map</string>
     <string name="map">Campus Map</string>
     <string name="building_label">Building</string>
+    <string name="course_description">GO TO COURSE DESCRIPTIONS</string>
+    <string name="student_involvement">GO TO STUDENT INVOLVEMENT</string>
+    <string name="back">Back to Main</string>
+    <string name="web_title">Webview Info</string>
 </resources>
